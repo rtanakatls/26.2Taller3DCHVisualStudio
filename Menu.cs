@@ -7,9 +7,27 @@ using System.Threading.Tasks;
 namespace Taller3DVisualStudio262
 {
     internal class Menu
-    { 
+    {
+        private List<Shape> shapes;
+
         public void Execute()
         {
+            shapes = new List<Shape>();
+            Circle c = new Circle(10);
+            Console.WriteLine($"Circulo: {c.GetArea()}");
+            shapes.Add(c);
+            for(int i=0; i<shapes.Count; i++)
+            {
+                Shape s = shapes[i];
+                Console.WriteLine($"Figura: {s.GetArea()}");
+            }
+
+
+
+
+            return;
+
+
             string name;
             int age;
 
